@@ -52,7 +52,6 @@ def prompt_gas():
 
 @app.route('/gas/mattermost/gas', methods=['POST'])
 def confirm_gas():
-    print(request.data)
     user_name = request.json['user_name']
     prompt = request.json['context']['action_prompt']
     gas = request.json['context']['gas']
